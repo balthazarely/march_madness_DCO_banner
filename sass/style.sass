@@ -1,0 +1,182 @@
+//custom variables
+$banner-width: 970px
+$banner-height: 250px
+$border-width: $banner-width - 2px
+$border-height: $banner-height - 2px
+$bg-color: #fff !important
+$font-primary: 'brandon-text-bold', Helvetica, Arial, sans-serif
+$font-secondary: 'brandon-text-black', Helvetica, Arial, sans-serif
+$font-tertiary: 'brandon-text-regular', Helvetica, Arial, sans-serif
+$font-medium: 'brandon-text-regular', Helvetica, Arial, sans-serif
+$font-proxima: 'proximanova_bold'
+$text-color-primary: #ffffff
+$text-color-secondary: #001E60
+$cta-text-color: #001E60 // also button border
+$button-background: #FAA21B
+
+body
+	font-family: $font-primary
+	color: $text-color-primary
+	-webkit-font-smoothing: antialiased
+	-moz-font-smoothing: antialiased
+
+#container
+	position: absolute
+	width: $banner-width
+	height: $banner-height
+	top: 0px
+	left: 0px
+	background-color: $bg-color
+	display: flex
+	justify-content: center
+	align-items: center
+	&:hover
+		cursor: pointer
+		#cta-button
+			background-color: darken($button-background, 10%)
+			font-size: 16px
+	&:active
+		#cta-button
+			left: 10px
+			top: 192px
+		#button-mask
+			left: 10px
+			top: 192px
+
+#logo
+	position: absolute
+	top: 16px
+	left: 16px
+	z-index: 10
+	height: 42px
+	width: auto
+
+#headline-1
+	position: absolute
+	left: 16px
+	top: 85px
+	font-size: 36px
+	letter-spacing: -.6px
+	line-height: 40px
+	font-family: $font-secondary
+	color: $text-color-primary
+	text-align: Left
+	display: flex
+	justify-content: left
+	align-items: left
+	z-index: 2
+
+#headline-2
+	position: absolute
+	left: 16px
+	top: 90px
+	font-size: 36px
+	letter-spacing: -.6px
+	line-height: 40px
+	font-family: $font-secondary
+	color: $text-color-primary
+	text-align: Left
+	display: flex
+	justify-content: left
+	align-items: left
+	z-index: 2
+
+#subhead
+	position: absolute
+	left: 16px
+	top: 155px
+	font-size: 20px
+	line-height: 24px
+	letter-spacing: 0px
+	font-family: $font-secondary
+	color: $text-color-secondary
+	text-align: left
+	display: flex
+	justify-content: left
+	align-items: center
+	z-index: 2
+
+#button-mask
+	position: absolute
+	left: 13px
+	top: 189px
+	width: 146px
+	height: 32px
+	z-index: 11
+	clip-path: inset(0 0 0 0)
+	-webkit-clip-path: inset(0 0 0 0)
+	background-color: rgba(244,44,44,0)
+
+#mask-shimmer
+	position: absolute
+	left: -10px
+	top: -100px
+	width: 5px
+	height: 190px
+	transform: rotate(20deg)
+	background: white
+	filter: blur(2px)
+	-webkit-clip-filter: blur(2px)
+
+#cta-text
+	transform: scale(0)
+	font-size: 17px
+
+#cta-button
+	transform: scale(0)
+	position: absolute
+	left: 13px
+	top: 189px
+	width: 146px
+	height: 32px
+	display: flex
+	justify-content: center
+	align-items: center
+	border-radius: 2px
+	z-index: 10
+	border: 1px solid #001E60
+	background-color: $button-background
+	color: $text-color-secondary
+
+#cta-button-under
+	transform: scale(0)
+	position: absolute
+	width: 146px
+	height: 32px
+	left: 10px
+	top: 192px
+	border-radius: 2px
+	z-index: 9
+	border: 1px solid #001E60
+	background-color: #001E60
+
+#background-wrapper
+	position: absolute
+	width: $banner-width
+	height: $banner-height
+	z-index: 1
+
+#background-image
+	bottom: 0px
+	right: 0px
+	position: absolute
+	width: $banner-width
+	height: $banner-height
+
+#restrictions
+	position: absolute
+	top: 231px
+	left: 16px
+	font-size: 7pt
+	font-family: $font-proxima
+	color: $text-color-secondary
+	z-index: 30
+
+#blackborder
+	position: absolute
+	width: $border-width
+	height: $border-height
+	top: 0px
+	left: 0px
+	border: 1px solid #000
+	z-index: 50000
